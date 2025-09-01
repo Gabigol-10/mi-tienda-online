@@ -1,0 +1,134 @@
+/* src/styles/App.module.css */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.main {
+  flex: 1;
+  padding-top: 0;
+}
+
+/* Scrollbar personalizada */
+.app ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.app ::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.app ::-webkit-scrollbar-thumb:hover {
+  background: #5a6fd8;
+}
+
+/* Animaciones globales */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Clases de utilidad para animaciones */
+.fadeInUp {
+  animation: fadeInUp 0.6s ease;
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.6s ease;
+}
+
+.slideInRight {
+  animation: slideInRight 0.6s ease;
+}
+
+/* Estilos para enlaces globales */
+.app a {
+  transition: all 0.3s ease;
+}
+
+.app a:hover {
+  text-decoration: none;
+}
+
+/* Estilos para botones globales */
+.app button {
+  transition: all 0.3s ease;
+}
+
+.app button:hover {
+  transform: translateY(-2px);
+}
+
+/* Estilos para inputs globales */
+.app input,
+.app textarea {
+  transition: all 0.3s ease;
+}
+
+.app input:focus,
+.app textarea:focus {
+  outline: none;
+}
+
+/* Estilos para imágenes globales */
+.app img {
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para tarjetas globales */
+.app .card {
+  transition: all 0.3s ease;
+}
+
+.app .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+}
